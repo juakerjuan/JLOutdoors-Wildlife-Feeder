@@ -78,16 +78,6 @@ Este proyecto permite crear un comedero automático para vida silvestre usando u
 5. Click the upload button (arrow)
    Haz clic en el botón de subir (flecha)
 
-### 6. Upload Web Files / Subir Archivos Web
-1. Install "ESP32 Sketch Data Upload" from Tools > Manage Libraries
-   Instala "ESP32 Sketch Data Upload" desde Herramientas > Gestionar Bibliotecas
-2. Create a folder called `data` in the same location as the .ino file
-   Crea una carpeta llamada `data` en la misma ubicación que el archivo .ino
-3. Copy `index.html` into the `data` folder
-   Copia `index.html` dentro de la carpeta `data`
-4. Click Tools > ESP32 Sketch Data Upload
-   Haz clic en Herramientas > ESP32 Sketch Data Upload
-
 ## Usage / Uso
 1. Connect the battery / Conecta la batería
 2. Turn on the switch (if installed) / Enciende el interruptor (si lo instalaste)
