@@ -40,7 +40,15 @@ Este proyecto permite crear un comedero automático para vida silvestre usando u
 2. Install the program
    Instala el programa
 
-### 2. Configure ESP32 / Configurar ESP32
+### 2. Install ESP32 Drivers / Instalar Drivers ESP32
+1. Download CP210x drivers from [Silicon Labs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+   Descarga los drivers CP210x desde [Silicon Labs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+2. Install the drivers
+   Instala los drivers
+3. Restart your computer
+   Reinicia tu computadora
+
+### 3. Configure ESP32 / Configurar ESP32
 1. Open Arduino IDE / Abre Arduino IDE
 2. Go to File > Preferences / Ve a Archivo > Preferencias
 3. Add to "Additional URLs" / Agrega en "URLs adicionales":
@@ -51,24 +59,26 @@ Este proyecto permite crear un comedero automático para vida silvestre usando u
 5. Search for "esp32" and install "ESP32 by Espressif Systems"
    Busca "esp32" e instala "ESP32 by Espressif Systems"
 
-### 3. Install Libraries / Instalar Bibliotecas
+### 4. Install Libraries / Instalar Bibliotecas
 1. Go to Tools > Manage Libraries / Ve a Herramientas > Gestionar Bibliotecas
 2. Search and install these libraries / Busca e instala estas bibliotecas:
    - AsyncTCP
    - ESPAsyncWebServer
    - ArduinoJson
 
-### 4. Upload Code / Subir Código
+### 5. Upload Code / Subir Código
 1. Download files from this repository
    Descarga los archivos de este repositorio
 2. Open `JLOutdoors_Feeder.ino` in Arduino IDE
    Abre `JLOutdoors_Feeder.ino` en Arduino IDE
 3. Select your ESP32 board in Tools > Board
    Selecciona tu placa ESP32 en Herramientas > Placa
-4. Click the upload button (arrow)
+4. Select the correct COM port in Tools > Port
+   Selecciona el puerto COM correcto en Herramientas > Puerto
+5. Click the upload button (arrow)
    Haz clic en el botón de subir (flecha)
 
-### 5. Upload Web Files / Subir Archivos Web
+### 6. Upload Web Files / Subir Archivos Web
 1. Install "ESP32 Sketch Data Upload" from Tools > Manage Libraries
    Instala "ESP32 Sketch Data Upload" desde Herramientas > Gestionar Bibliotecas
 2. Create a folder called `data` in the same location as the .ino file
@@ -114,4 +124,5 @@ If you have problems / Si tienes problemas:
 1. Check all connections / Verifica todas las conexiones
 2. Make sure battery is charged / Asegúrate de que la batería esté cargada
 3. Restart ESP32 / Reinicia el ESP32
-4. Check serial monitor in Arduino IDE / Revisa el monitor serial en Arduino IDE 
+4. Check serial monitor in Arduino IDE / Revisa el monitor serial en Arduino IDE
+5. If ESP32 is not detected, install CP210x drivers / Si el ESP32 no es detectado, instala los drivers CP210x 
