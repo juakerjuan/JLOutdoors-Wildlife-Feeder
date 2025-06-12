@@ -128,12 +128,64 @@ If you have problems / Si tienes problemas:
 If you see "Failed to connect to ESP32" or "No serial data received":
 Si ves "Failed to connect to ESP32" o "No serial data received":
 
-1. Hold the BOOT button on ESP32
-   Mantén presionado el botón BOOT en el ESP32
-2. Click the upload button in Arduino IDE
-   Haz clic en el botón de subir en Arduino IDE
-3. When you see "Connecting..." release the BOOT button
-   Cuando veas "Connecting..." suelta el botón BOOT
+##### Solución Paso a Paso / Step by Step Solution:
+
+1. **Preparación / Preparation**:
+   - Cierra el Arduino IDE
+   - Desconecta el ESP32
+   - Espera 5 segundos
+   - Conecta el ESP32
+   - Abre el Arduino IDE
+
+2. **Selección de Puerto / Port Selection**:
+   - Ve a Herramientas > Puerto
+   - Selecciona el puerto COM que aparece
+   - Si no ves ningún puerto, ve al paso 3
+
+3. **Verificación de Drivers / Driver Check**:
+   - Abre el Administrador de Dispositivos
+   - Busca en "Puertos (COM y LPT)"
+   - Si ves un dispositivo con signo de exclamación:
+     1. Haz clic derecho > Desinstalar
+     2. Desconecta el ESP32
+     3. Descarga e instala los drivers CP210x
+     4. Reinicia la computadora
+
+4. **Modo de Programación / Programming Mode**:
+   - Mantén presionado el botón BOOT en el ESP32
+   - Haz clic en el botón de subir en Arduino IDE
+   - Cuando veas "Connecting..." suelta el botón BOOT
+   - Si no funciona, intenta:
+     1. Mantener presionado BOOT
+     2. Presionar y soltar RESET
+     3. Soltar BOOT
+
+5. **Configuración de la Placa / Board Settings**:
+   Verifica que tengas estas configuraciones:
+   ```
+   Board: "ESP32 Dev Module"
+   Upload Speed: "115200"
+   CPU Frequency: "240MHz (WiFi/BT)"
+   Flash Frequency: "80MHz"
+   Flash Mode: "QIO"
+   Flash Size: "4MB (32Mb)"
+   Partition Scheme: "Default 4MB with spiffs"
+   Core Debug Level: "None"
+   PSRAM: "Disabled"
+   ```
+
+6. **Cable USB / USB Cable**:
+   - Prueba con otro cable USB
+   - Algunos cables son solo para carga
+   - El cable debe ser de datos
+
+7. **Último Recurso / Last Resort**:
+   Si nada funciona:
+   1. Desinstala los drivers CP210x
+   2. Reinicia la computadora
+   3. Instala los drivers nuevamente
+   4. Prueba con otro puerto USB
+   5. Prueba con otro ESP32 si es posible
 
 #### 2. Wrong COM Port / Puerto COM Incorrecto
 1. Open Device Manager / Abre el Administrador de Dispositivos
