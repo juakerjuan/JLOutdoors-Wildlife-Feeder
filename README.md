@@ -121,6 +121,58 @@ Visita [JLOutdoors](https://www.youtube.com/@JLOutdoors) para más proyectos y t
 
 ## ❓ Help / Ayuda
 If you have problems / Si tienes problemas:
+
+### Common Issues / Problemas Comunes
+
+#### 1. ESP32 Not Detected / ESP32 No Detectado
+If you see "Failed to connect to ESP32" or "No serial data received":
+Si ves "Failed to connect to ESP32" o "No serial data received":
+
+1. Hold the BOOT button on ESP32
+   Mantén presionado el botón BOOT en el ESP32
+2. Click the upload button in Arduino IDE
+   Haz clic en el botón de subir en Arduino IDE
+3. When you see "Connecting..." release the BOOT button
+   Cuando veas "Connecting..." suelta el botón BOOT
+
+#### 2. Wrong COM Port / Puerto COM Incorrecto
+1. Open Device Manager / Abre el Administrador de Dispositivos
+2. Look under "Ports (COM & LPT)"
+   Busca en "Puertos (COM y LPT)"
+3. Connect/disconnect ESP32 to see which port appears/disappears
+   Conecta/desconecta el ESP32 para ver qué puerto aparece/desaparece
+4. Select the correct port in Arduino IDE
+   Selecciona el puerto correcto en Arduino IDE
+
+#### 3. Driver Issues / Problemas con Drivers
+1. Download CP210x drivers from [Silicon Labs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+   Descarga los drivers CP210x desde [Silicon Labs](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads)
+2. Uninstall existing drivers
+   Desinstala los drivers existentes
+3. Install new drivers
+   Instala los nuevos drivers
+4. Restart computer
+   Reinicia la computadora
+
+#### 4. USB Cable Issues / Problemas con Cable USB
+1. Try a different USB cable
+   Prueba un cable USB diferente
+2. Some cables are charge-only, make sure yours supports data
+   Algunos cables son solo para carga, asegúrate que el tuyo soporte datos
+
+#### 5. ESP32 Board Settings / Configuración de la Placa ESP32
+Make sure these settings are correct / Asegúrate que estas configuraciones sean correctas:
+- Board: "ESP32 Dev Module"
+- Upload Speed: "115200"
+- CPU Frequency: "240MHz (WiFi/BT)"
+- Flash Frequency: "80MHz"
+- Flash Mode: "QIO"
+- Flash Size: "4MB (32Mb)"
+- Partition Scheme: "Default 4MB with spiffs"
+- Core Debug Level: "None"
+- PSRAM: "Disabled"
+
+### General Troubleshooting / Solución de Problemas General
 1. Check all connections / Verifica todas las conexiones
 2. Make sure battery is charged / Asegúrate de que la batería esté cargada
 3. Restart ESP32 / Reinicia el ESP32
